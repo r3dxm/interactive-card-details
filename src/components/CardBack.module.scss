@@ -1,0 +1,51 @@
+.container {
+  width: 447px;
+  height: 245px;
+  border-radius: 10px;
+  background: url("../images/bg-card-back.png");
+  background-repeat: no-repeat;
+  margin-top: 40px;
+  margin-left: 120px;
+  cursor: default;
+  user-select: none;
+
+  p {
+    position: absolute;
+    margin-left: 350px;
+    margin-top: 108px;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: var(--white);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 330px;
+    height: 180px;
+    background-size: contain;
+    margin: 0;
+    margin-left: 75px;
+
+    p {
+      font-size: 16px;
+      margin-top: 78px;
+      margin-left: 255px;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .container {
+    width: 260px;
+    height: 150px;
+    margin-left: 65px;
+
+    p {
+      font-size: 12px;
+      margin-top: 63px;
+      margin-left: 200px;
+    }
+  }
+}

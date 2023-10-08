@@ -1,0 +1,100 @@
+.container {
+  width: 367px;
+  height: 205px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: url("../images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: var(--white);
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: default;
+  user-select: none;
+}
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+
+  h1 {
+    align-self: flex-start;
+    font-size: 28px;
+  }
+}
+
+.namedate {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 250px;
+    height: 140px;
+    background-size: cover;
+    margin-top: -78px;
+    margin-left: -75px;
+
+    img {
+      height: 30px;
+    }
+  }
+
+  .details {
+    h1 {
+      font-size: 20px;
+    }
+  }
+
+  .namedate {
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .container {
+    width: 220px;
+    height: 110px;
+    background-size: cover;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -69px;
+    margin-left: -65px;
+
+    img {
+      height: 20px;
+    }
+  }
+
+  .details {
+    h1 {
+      font-size: 16px;
+    }
+  }
+
+  .namedate {
+    p {
+      font-size: 12px;
+    }
+  }
+}

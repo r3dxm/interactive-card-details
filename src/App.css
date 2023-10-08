@@ -1,38 +1,68 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+  --red: hsl(0, 100%, 66%);
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./fonts/SpaceGrotesk.ttf");
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: "SpaceGrotesk";
 }
 
-.App-link {
-  color: #61dafb;
+.background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: url("./images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  background-color: var(--white);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.foreground {
+  position: absolute;
+  z-index: 2;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 1250px) {
+  .foreground {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 1000px) {
+  .background {
+    background: url("./images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+  }
+
+  .foreground {
+    flex-direction: column;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 }

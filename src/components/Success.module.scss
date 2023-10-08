@@ -1,0 +1,55 @@
+.container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+
+  img {
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: var(--very-dark-violet);
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--dark-grayish-violet);
+    margin-bottom: 40px;
+  }
+
+  button {
+    width: calc(100% + 5px);
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    font-family: "SpaceGrotesk";
+    font-weight: 500;
+    font-size: 16px;
+    transition: 300ms;
+  }
+
+  button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  button:active {
+    background-color: var(--white);
+    color: var(--very-dark-violet);
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .container {
+    width: 350px;
+  }
+}
