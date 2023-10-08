@@ -28,7 +28,7 @@ function Form(props) {
 
 	function validateName(e) {
 		let tempName = e.target.value;
-		name !== "" ? setEmptyName(false) : setEmptyName(true);
+		if (name !== "") setEmptyName(false);
 		if (String(tempName).match(/^[A-Za-z\s]*$/)) {
 			dispatch(updateName(tempName));
 			setName(tempName);
@@ -40,7 +40,7 @@ function Form(props) {
 
 	function validateCardno(e) {
 		const tempCardno = e.target.value;
-		cardno !== "" ? setEmptyCardno(false) : setEmptyCardno(true);
+		if (cardno !== "") setEmptyCardno(false);
 		setInvalidAccount(false);
 		if (
 			String(tempCardno).match(/^[0-9]+$/) &&
@@ -57,7 +57,7 @@ function Form(props) {
 
 	function validateExpMonth(e) {
 		const tempExpMonth = e.target.value;
-		expMonth !== "" ? setEmptyExpMonth(false) : setEmptyExpMonth(true);
+		if (expMonth !== "") setEmptyExpMonth(false);
 		if (parseInt(tempExpMonth) < 1 || parseInt(tempExpMonth) > 12) {
 			e.target.value = String(tempExpMonth).slice(0, -1);
 			return 0;
@@ -78,7 +78,7 @@ function Form(props) {
 	function validateExpYear(e) {
 		const tempExpYear = e.target.value;
 		setInvalidYear(false);
-		expYear !== "" ? setEmptyExpYear(false) : setEmptyExpYear(true);
+		if (expYear !== "") setEmptyExpYear(false);
 		if (parseInt(tempExpYear) < 1 || parseInt(tempExpYear) > 40) {
 			e.target.value = String(tempExpYear).slice(0, -1);
 			return 0;
@@ -99,7 +99,7 @@ function Form(props) {
 	function validateCvc(e) {
 		const tempCvc = e.target.value;
 		setInvalidCvc(false);
-		cvc !== "" ? setEmptyCvc(false) : setEmptyCvc(true);
+		if (cvc !== "") setEmptyCvc(false);
 		if (String(tempCvc).match(/^[0-9]+$/) && String(tempCvc).length <= 3) {
 			dispatch(updateCvc(tempCvc));
 			setCvc(tempCvc);

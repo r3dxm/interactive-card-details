@@ -53,7 +53,7 @@
     background: url("./images/bg-main-mobile.png");
     background-repeat: no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: 100% 30%;
   }
 
   .foreground {
